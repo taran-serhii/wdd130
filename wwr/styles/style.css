@@ -151,7 +151,7 @@ h4 {
     margin-top: -100px;
 }
 
-#hero-img {
+#hero-img, #banner-img {
     width: 100%;
 }
 
@@ -226,6 +226,66 @@ h2 {
     grid-column: 2/7;
     grid-row: 5/8;
     box-shadow: 5px 5px 10px #6f7364;
+}
+
+.container {
+    width: 800px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 5px 5px 10px #6f7364;
+    border-radius: 10px;
+    margin: 50px auto;
+    border: 2px solid black;
+}
+
+.box {
+    width: 800px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: -1px -2px;
+}
+
+.box h2 {
+    font-size: 1.5em;
+    color: #031d44;
+    font-family: "Aref Ruqaa Ink", Helvetica, sans-serif;
+    text-align: center;
+}
+
+.box-img {
+    width: 50%;
+    height: 65%;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.duration_and_price {
+    width: 350px;
+    height: 100px;
+    background-color: white;
+    margin-left: 450px;
+    margin-top: -290px;
+}
+
+.duration_and_price h4 {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    color: black;
+}
+
+.duration_and_price h5 {
+    margin-top: -10px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+
+.separator_line {
+    background-color: black;
+    height: 4px;
+    width: 330px;
+    margin-top: -30px;
 }
 
 @media screen and (max-width: 900px) {
