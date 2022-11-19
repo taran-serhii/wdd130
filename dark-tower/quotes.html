@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dark Tower</title>
+      <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+      <div id="content">
+          <header>
+              <a id="logo_link" href="index.html">
+                  <img class="logo" src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/dark_tower_logo.png" alt="Dark Tower Logo">
+              </a>
+              <nav>
+                  <a href="index.html">Home</a>
+                  <a href="quotes.html">Quotes</a>
+                  <a href="reading_list.html">Reading List</a>
+                  <a href="site-plan.html">Site Plan</a>
+              </nav>
+          </header>
+      </div>  
+      <main>
+        <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/quotes_page_desert.png" alt="desert">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+              <!-- Full-width slides/quotes -->
+              <div class="mySlides">
+                <q>“The man in black fled across the desert, and the gunslinger followed.”</q>
+                <p class="author">- Stephen King</p>
+              </div>
+            
+              <div class="mySlides">
+                <q>“Go then, there are other worlds than these.”</q>
+                <p class="author">- Jake Chambers</p>
+              </div>
+            
+              <div class="mySlides">
+                <q>“Time is the thief of memory.”</q>
+                <p class="author">- Abel Vannay</p>
+              </div>
+
+              <div class="mySlides">
+                <q>“Was there ever a trap to match the trap of love?”</q>
+                <p class="author">- Jake Chambers</p>
+              </div>
+            
+              <!-- Next/prev buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+            
+            <!-- Dots/bullets/indicators -->
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+          <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/quotes_page_revolver.jpg" alt="revolver">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+              <!-- Full-width slides/quotes -->
+              <div class="mySlides">
+                <q>“I do not aim with my hand; he who aims with his hand has forgotten the face of his father. I aim with my eye.
+                    I do not shoot with my hand; he who shoots with his hand has forgotten the face of his father. I shoot with my mind.
+                    I do not kill with my gun; he who kills with his gun has forgotten the face of his father. I kill with my heart.”</q>
+                <p class="author">- Roland Deschain</p>
+              </div>
+            
+              <div class="mySlides">
+                <q>“The greatest mystery the universe offers is not life but size.” </q>
+                <p class="author">- Edward Dean</p>
+              </div>
+            
+              <div class="mySlides">
+                <q>“The man in black travels with your soul in his pocket.”</q>
+                <p class="author">- Walter Padick</p>
+              </div>
+
+              <div class="mySlides">
+                <q>“May you find your Tower ... and breach it, and may you climb to the top!”</q>
+                <p class="author">- Father Donald Callahan</p>
+              </div>
+            
+              <!-- Next/prev buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+            
+            <!-- Dots/bullets/indicators -->
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+          <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/quotes_page_guy.png" alt="A man with a gun and a sword">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+              <!-- Full-width slides/quotes -->
+              <div class="mySlides">
+                <q>“Fault always lies in the same place, my fine babies: with him weak enough to lay blame.”</q>
+                <p class="author">- Cortland Andrus</p>
+              </div>
+            
+              <div class="mySlides">
+                <q>"It is ... a job that needs to be done ... wrong cannot be allowed to stand."</q>
+                <p class="author">- Steven Deschain</p>
+              </div>
+            
+              <div class="mySlides">
+                <q>"If ... we can help them, then we have to help them. That's ... the Eld's way."</q>
+                <p class="author">- Edward Dean</p>
+              </div>
+            
+              <!-- Next/prev buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+            
+            <!-- Dots/bullets/indicators -->
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+      </main>
+
+      <footer>
+          <p>Dark Tower &copy; 2022 - Serhii Taran</p>
+          <p><a href="site-plan.html">Site Plan</a></p>
+      </footer>
+
+      <script>
+              var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+          showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+          showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+              }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          }
+      </script>
+      
+  </body>
+</html>

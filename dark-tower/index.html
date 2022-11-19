@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dark Tower</title>
+      <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+      <div id="content">
+          <header>
+              <a id="logo_link" href="index.html">
+                  <img class="logo" src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/dark_tower_logo.png" alt="Dark Tower Logo">
+              </a>
+              <nav>
+                  <a href="index.html">Home</a>
+                  <a href="quotes.html">Quotes</a>
+                  <a href="reading_list.html">Reading List</a>
+                  <a href="site-plan.html">Site Plan</a>
+              </nav>
+          </header>
+      </div>  
+      <main>
+        <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/home_page_desert.jpg" alt="desert">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+              <!-- Full-width slides/quotes -->
+              <div class="mySlides">
+                <q>A humane, visionary epic and a true magnum opus that stands as an imposing example of pure storytelling, filled with brilliantly rendered set pieces... cataclysmic encounters and moments of desolating tragedy.</q>
+                <p class="author">- Bill Sheehan of The Washington Post</p>
+              </div>
+            
+              <div class="mySlides">
+                <q>There's a fascinating world to be discovered in the series.</q>
+                <p class="author">- Erica Noonan of the Boston Globe</p>
+              </div>
+            
+              <div class="mySlides">
+                <q>The novels were better and weirder than I hoped. If you really like Stephen King, you owe it to yourself to give the series a shot.</q>
+                <p class="author">- Joshua Rothman of The New Yorker</p>
+              </div>
+            
+              <!-- Next/prev buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+            
+            <!-- Dots/bullets/indicators -->
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+        <div id="warning">
+          Warning: due to the books topic - the world that is fell apart, and connected to this topic violent scenes, the recommended age of the readers is 16+.
+        </div>
+        
+        <div class="invite-block">
+          <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/home_page_book_cover.jpg" alt="A book cover of the first book in the series">
+          <p>The Dark Tower series contains 8 books and many more additional stories. Please refer to the reading list to find out where to begin your journey and to find deserts in case you already finished the main meal.</p>
+          <div class="button-box">
+            <a class="button" href="">Reading list</a>
+          </div>
+        </div>
+      
+
+        <div class="invite-block">
+          <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/home_page_rose.png" alt="red rose on the black background">
+          <p>“In this universe there might grow roses which sing.”</p>
+          <p>Find more interesting quotes from the Dark Tower series on the Quotes page.</p>
+          <div class="button-box">
+            <a class="button" href="">Quotes</a>
+          </div>
+        </div>
+
+      </main>
+
+      <footer>
+          <p>Dark Tower &copy; 2022 - Serhii Taran</p>
+          <p><a href="site-plan.html">Site Plan</a></p>
+      </footer>
+
+      <script>
+              var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+          showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+          showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+              }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          }
+      </script>
+      
+  </body>
+</html>
