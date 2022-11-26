@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@1,300&display=swap');
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
+}
+
+body {
+  background-color: #396E94;
+  font-family: 'Bebas Neue', cursive, Arial;
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
 }
 
 nav {
@@ -13,94 +23,223 @@ nav, a {
     color: black; 
     text-decoration: none;
     padding: 35px;
+    font-size: 25px;
 }
 
 nav a:hover {
-    background-color: #06285b;
+    background-color: #396E94;
     color: white;
 }
 
+.logo {
+  width: 100px;
+  border-radius: 5px;
+}
+
+#logo-link {
+  padding-top: 5px;
+  justify-self: center;
+  align-self: center;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 150px auto;
+  background-color: #7BCAF4;
+}
+
 .button {
-  background-color: #f4da71;
+  background-color: #7BCAF4;
   color: black;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 30px;
   padding: 15px 30px;
   margin-top: 50px;
   border-radius: 5px;
 }
 
+.button:hover {
+  background-color: #A42212;
+  color: white;
+}
+
+
+* {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
-    position: relative;
-    background: #f1f1f1f1;
-  }
-  
-  /* Slides */
-  .mySlides {
-    display: none;
-    padding: 80px;
-    text-align: center;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 16px;
-    color: #888;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    position: absolute;
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-    color: white;
-  }
-  
-  /* The dot/bullet/indicator container */
-  .dot-container {
-    text-align: center;
-    padding: 20px;
-    background: #ddd;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  /* Add a background color to the active dot/circle */
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
-  /* Add an italic font style to all quotes */
-  q {font-style: italic;}
-  
-  /* Add a blue color to the author */
-  .author {color: cornflowerblue;}
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  border-radius: 10px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#warning {
+  background-color: #A62112;
+  width: 100%;
+  height: 75px;
+  margin-top: 50px;
+}
+
+#warning, p {
+  padding-top: 0.5px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.invite-block_1 {
+  position: relative;
+  width: 1000px;
+  height: 650px;
+  background-color: #f4da71;
+  margin: 100px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.invite-block_1 #book-cover {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 500px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #6f7364;
+}
+
+.invite-block_1 p {
+  position:absolute;
+  top: 50px;
+  left: 570px;
+  width: 400px;
+  font-family: Kanit, Georgia, sans-serif;
+  font-size: 30px;
+}
+
+.invite-block_1 .button-box {
+  position: absolute;
+  top: 525px;
+  left: 675px;
+}
+
+.invite-block_2 {
+  position: relative;
+  width: 1000px;
+  height: 650px;
+  background-color: #f4da71;
+  margin: 0 auto;
+  margin-bottom: -100px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.invite-block-2, h2 {
+  position:absolute;
+  top: 75px;
+  left: 570px;
+  width: 400px;
+  font-family: Kanit, Georgia, sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.invite-block_2 #rose {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 500px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #6f7364;
+}
+
+.invite-block_2 p {
+  position:absolute;
+  top: 250px;
+  left: 570px;
+  width: 400px;
+  font-family: Kanit, Georgia, sans-serif;
+  font-size: 30px;
+}
+
+.invite-block_2 .button-box {
+  position: absolute;
+  top: 525px;
+  left: 700px;
+}
+
 
 footer {
     background-color: #74c1d3;

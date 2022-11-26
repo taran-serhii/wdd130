@@ -22,59 +22,60 @@
           </header>
       </div>  
       <main>
-        <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/home_page_desert.jpg" alt="desert">
+
         <!-- Slideshow container -->
         <div class="slideshow-container">
 
-              <!-- Full-width slides/quotes -->
-              <div class="mySlides">
-                <q>A humane, visionary epic and a true magnum opus that stands as an imposing example of pure storytelling, filled with brilliantly rendered set pieces... cataclysmic encounters and moments of desolating tragedy.</q>
-                <p class="author">- Bill Sheehan of The Washington Post</p>
-              </div>
-            
-              <div class="mySlides">
-                <q>There's a fascinating world to be discovered in the series.</q>
-                <p class="author">- Erica Noonan of the Boston Globe</p>
-              </div>
-            
-              <div class="mySlides">
-                <q>The novels were better and weirder than I hoped. If you really like Stephen King, you owe it to yourself to give the series a shot.</q>
-                <p class="author">- Joshua Rothman of The New Yorker</p>
-              </div>
-            
-              <!-- Next/prev buttons -->
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/home_desert_q1.png" alt="desert" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/home_desert_q2.png" alt="desert" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/home_desert_q3.png" alt="desert" style="width:100%">
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-            
-            <!-- Dots/bullets/indicators -->
-            <div class="dot-container">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
 
         <div id="warning">
-          Warning: due to the books topic - the world that is fell apart, and connected to this topic violent scenes, the recommended age of the readers is 16+.
+          <p> Warning: due to the books topic - the world that is fell apart, and connected to this topic violent scenes, the recommended age of the readers is 16+.</p>
         </div>
         
-        <div class="invite-block">
-          <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/home_page_book_cover.jpg" alt="A book cover of the first book in the series">
-          <p>The Dark Tower series contains 8 books and many more additional stories. Please refer to the reading list to find out where to begin your journey and to find deserts in case you already finished the main meal.</p>
-          <div class="button-box">
-            <a class="button" href="">Reading list</a>
+          <div class="invite-block_1">
+            <img id="book-cover" src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/home_page_book_cover.jpg" alt="A book cover of the first book in the series">
+            <p>The Dark Tower series contains 8 books and many more additional stories. Please refer to the reading list to find out where to begin your journey and to find desserts in case you already finished the main meal.</p>
+            <div class="button-box">
+              <a class="button" href="reading_list.html">Reading list</a>
+            </div>
           </div>
-        </div>
-      
+        
 
-        <div class="invite-block">
-          <img src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/home_page_rose.png" alt="red rose on the black background">
-          <p>“In this universe there might grow roses which sing.”</p>
-          <p>Find more interesting quotes from the Dark Tower series on the Quotes page.</p>
-          <div class="button-box">
-            <a class="button" href="">Quotes</a>
+          <div class="invite-block_2">
+            <img id="rose" src="https://raw.githubusercontent.com/taran-serhii/wdd130/master/dark-tower/images/home_page_rose.png" alt="red rose on the black background">
+            <h2>“In this universe there might grow roses which sing.”</h2>
+            <p>Find more interesting quotes from the Dark Tower series on the Quotes page.</p>
+            <div class="button-box">
+              <a class="button" href="quotes.html">Quotes</a>
+            </div>
           </div>
-        </div>
 
       </main>
 
@@ -84,32 +85,34 @@
       </footer>
 
       <script>
-              var slideIndex = 1;
-          showSlides(slideIndex);
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-          function plusSlides(n) {
+        // Next/previous controls
+        function plusSlides(n) {
           showSlides(slideIndex += n);
-          }
+        }
 
-          function currentSlide(n) {
+        // Thumbnail image controls
+        function currentSlide(n) {
           showSlides(slideIndex = n);
-          }
+        }
 
-          function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
           if (n > slides.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-              }
-              for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-              }
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
           slides[slideIndex-1].style.display = "block";
           dots[slideIndex-1].className += " active";
-          }
+        }
       </script>
       
   </body>
