@@ -79,8 +79,36 @@ header {
   display: none;
 }
 
+.mySlides1 {
+  display: none;
+}
+
+.mySlides2 {
+  display: none;
+}
+
+.mySlides3 {
+  display: none;
+}
+
 .mySlides img {
   border-radius: 10px;
+  vertical-align: middle;
+}
+
+.mySlides1 img {
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.mySlides2 img {
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.mySlides3 img {
+  border-radius: 10px;
+  vertical-align: middle;
 }
 
 /* Next & previous buttons */
