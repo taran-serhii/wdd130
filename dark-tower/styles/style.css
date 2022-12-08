@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #396E94;
+  background-color: #4E95C7;
   font-family: 'Bebas Neue', cursive, Arial;
   font-size: 22px;
   padding: 0;
@@ -27,7 +27,7 @@ nav, a {
 }
 
 nav a:hover {
-    background-color: #396E94;
+    background-color: #4E95C7;
     color: white;
 }
 
